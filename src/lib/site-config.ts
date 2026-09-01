@@ -11,6 +11,13 @@ export const siteConfig = {
   tagline: "Fresh Dum Biryani · Made Fresh · Served Hot",
   description:
     "Premium cloud kitchen serving slow dum-cooked chicken, mutton, prawns, egg and veg biryani. Order on Swiggy, Zomato, or direct from our kitchen, with our own delivery across Sector V and New Town, plus corporate and party catering.",
+  /**
+   * Must match whichever host Vercel serves as primary. Right now the apex
+   * 308-redirects to www, so www is canonical: pointing the canonical tag at a
+   * URL that redirects elsewhere splits ranking signals. If you make the apex
+   * primary in Vercel, change this to match. This one value drives the
+   * canonical tag, sitemap, robots.txt, Open Graph URLs and the JSON-LD @id.
+   */
   url: "https://www.biryaniandmore.in",
 
   /** FSSAI licence number. Indian food businesses must display this publicly. */
@@ -31,9 +38,9 @@ export const siteConfig = {
       country: "IN",
     },
     hours: {
-      display: "11:00 AM to 11:00 PM, all days",
+      display: "1:00 PM to 11:00 PM, all days",
       // 24-hour times for the openingHoursSpecification in schema.org markup.
-      opens: "11:00",
+      opens: "13:00",
       closes: "23:00",
     },
   },
@@ -56,11 +63,14 @@ export const siteConfig = {
   /**
    * Three ways to order. No in-house cart/checkout/payment flow. Direct orders
    * are taken over WhatsApp/phone and fulfilled by our own delivery team.
-   * TODO: replace marketplace URLs with the real live listings.
    */
   ordering: {
-    swiggy: "https://www.swiggy.com/restaurants/biryani-and-more-kolkata", // TODO
-    zomato: "https://www.zomato.com/kolkata/biryani-and-more", // TODO
+    // Verified live: Salt Lake outlet listing.
+    swiggy:
+      "https://www.swiggy.com/city/kolkata/biryani-and-more-salt-lake-rest1370447",
+    // TODO: replace with the real Zomato listing. The current URL 404s, so the
+    // Zomato buttons are hidden until this is filled in (see zomatoIsLive).
+    zomato: "",
   },
 
   social: {

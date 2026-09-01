@@ -14,7 +14,12 @@ interface OrderChannel {
   featured?: boolean;
 }
 
-const channels: OrderChannel[] = [
+/**
+ * A channel is only listed once it has a real URL. Shipping a card whose button
+ * goes nowhere is worse than omitting the card, so an empty URL in site-config
+ * hides that channel until the real listing link is filled in.
+ */
+const allChannels: OrderChannel[] = [
   {
     key: "swiggy",
     accent: "#FC8019",
@@ -43,6 +48,8 @@ const channels: OrderChannel[] = [
     featured: true,
   },
 ];
+
+const channels = allChannels.filter((channel) => channel.href.length > 0);
 
 export function OrderChannels() {
   return (

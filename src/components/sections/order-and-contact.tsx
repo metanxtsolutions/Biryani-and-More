@@ -36,15 +36,18 @@ export function OrderAndContact() {
             Swiggy
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
           </a>
-          <a
-            href={siteConfig.ordering.zomato}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonVariants({ variant: "secondary", size: "lg" })}
-          >
-            Zomato
-            <ExternalLink className="h-4 w-4" aria-hidden="true" />
-          </a>
+          {/* Hidden until the real Zomato listing URL is set in site-config. */}
+          {siteConfig.ordering.zomato && (
+            <a
+              href={siteConfig.ordering.zomato}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({ variant: "secondary", size: "lg" })}
+            >
+              Zomato
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>
+          )}
         </Reveal>
 
         <Reveal delay={0.15} className="mt-6">
