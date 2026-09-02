@@ -16,8 +16,8 @@ export function About() {
         <Reveal delay={0.1} className="relative order-last lg:order-first">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-warm">
             <Image
-              src="/images/veg-dum-biryani.jpg"
-              alt="Biryani plated with the whole spices used to cook it"
+              src="/images/mutton-biryani-combo.jpg"
+              alt="A full Biryani and More meal: dum biryani served with raita, salad and a Gondhoraj sherbet"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"

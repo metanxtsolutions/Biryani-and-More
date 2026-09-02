@@ -27,7 +27,10 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        // Source photo is square (1080x1080) but the hero is a wide banner, so
+        // object-cover shows only a horizontal band. Bias it low (85%) to keep
+        // the biryani bowl in frame rather than the empty counter above it.
+        className="object-cover object-[50%_85%]"
       />
 
       {/* Warm scrim: keeps display type at AA contrast over the photo */}

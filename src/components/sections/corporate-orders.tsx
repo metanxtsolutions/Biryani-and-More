@@ -58,7 +58,7 @@ export function CorporateOrders() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-warm">
             <Image
               src="/images/mutton-dum-biryani.jpg"
-              alt="A large biryani handi prepared for a group order"
+              alt="Mutton dum biryani served with raita and salad, ready for a group order"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"

@@ -75,6 +75,7 @@ export const menu: MenuCategory[] = [
         price: 199,
         dietary: "egg",
         serves: "1",
+        image: "/images/egg-biryani.jpg",
       },
       {
         id: "veg-dum-biryani",
