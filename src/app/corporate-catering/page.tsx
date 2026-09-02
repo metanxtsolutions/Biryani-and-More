@@ -89,9 +89,10 @@ export default function CorporateCateringPage() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              Office lunches, team meetings, client events and festival days. Tell us the
-              headcount and the date, and we cook fresh dum biryani that morning and deliver
-              it with our own riders.
+              Office lunches, team meetings, client events and festival days, from{" "}
+              {siteConfig.catering.minGuests} people upwards. Tell us the headcount and the
+              date, and we cook fresh dum biryani that morning and deliver it with our own
+              riders.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -112,7 +113,16 @@ export default function CorporateCateringPage() {
               </a>
             </div>
 
-            <dl className="mt-10 grid max-w-lg grid-cols-2 gap-x-6 gap-y-5 border-t border-cream/15 pt-7 sm:grid-cols-3">
+            <dl className="mt-10 grid max-w-xl grid-cols-2 gap-x-6 gap-y-5 border-t border-cream/15 pt-7 sm:grid-cols-4">
+              <div>
+                <dt className="flex items-center gap-2 text-[0.7rem] uppercase tracking-wider text-cream/55">
+                  <Users className="h-3.5 w-3.5 text-saffron-300" aria-hidden="true" />
+                  Minimum
+                </dt>
+                <dd className="font-display mt-1.5 text-lg font-semibold">
+                  {siteConfig.catering.minGuests} guests
+                </dd>
+              </div>
               <div>
                 <dt className="flex items-center gap-2 text-[0.7rem] uppercase tracking-wider text-cream/55">
                   <Clock className="h-3.5 w-3.5 text-saffron-300" aria-hidden="true" />
@@ -160,7 +170,7 @@ export default function CorporateCateringPage() {
           <SectionHeading
             eyebrow="How much you need"
             title="Order sizes we handle"
-            lead="Bulk pricing is quoted per order rather than fixed, because it depends on the dish split and the date. These bands tell you roughly what to expect."
+            lead={`Catering starts at ${siteConfig.catering.minGuests} people. Pricing is quoted per order rather than fixed, because it depends on the dish split and the date, so these bands tell you roughly what to expect.`}
           />
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

@@ -97,7 +97,9 @@ export const siteConfig = {
 
   /** Corporate / bulk / party catering: a core revenue line, handled directly. */
   catering: {
-    minNoticeHours: 24, // TODO: confirm real lead time for bulk orders
+    /** Both confirmed by the owner on 2 Sep 2026. */
+    minGuests: 10,
+    minNoticeHours: 24,
     useCases: [
       "Office lunches",
       "Team meetings",

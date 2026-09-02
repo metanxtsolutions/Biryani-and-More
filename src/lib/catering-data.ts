@@ -18,13 +18,13 @@ export interface CateringTier {
 /**
  * Headcount bands, not prices. Bulk pricing is quoted per order, so publishing
  * a rate card we cannot honour would do more harm than the SEO is worth.
- * TODO: confirm the real minimum order size and replace the "From 10 guests"
- * band if we actually require more.
+ * The lowest band starts at siteConfig.catering.minGuests, which is a real
+ * minimum: below it we do not take a catering order.
  */
 export const cateringTiers: CateringTier[] = [
   {
     band: "Team lunch",
-    headcount: "10 to 25",
+    headcount: `${siteConfig.catering.minGuests} to 25`,
     suits: "A single team, a sprint kickoff, a Friday treat",
     format: "Individually packed meal boxes, labelled veg and non-veg",
   },
@@ -98,6 +98,10 @@ export const cateringFaqs: CateringFaq[] = [
     question: "Can you cater biryani for 50 people?",
     answer:
       "Yes. Fifty guests sits in our event catering band, which we serve either as individually packed meal boxes or as bulk handis with serving spoons, raita and salad in trays. Message us on WhatsApp with your date and we will send a per-head quote.",
+  },
+  {
+    question: "What is the minimum order for corporate catering?",
+    answer: `Catering orders start at ${siteConfig.catering.minGuests} people. Below that you are welcome to order from the regular menu on WhatsApp, Swiggy or Zomato, and it will still be cooked fresh, it just does not go through the catering process with a per-head quote.`,
   },
   {
     question: "How much notice do you need for a bulk order?",
