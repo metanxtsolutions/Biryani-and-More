@@ -48,6 +48,7 @@ export function Footer() {
             <li><Link href="/#why-us" className="hover:text-saffron-300">Why Choose Us</Link></li>
             <li><Link href="/#reviews" className="hover:text-saffron-300">Customer Reviews</Link></li>
             <li><Link href="/biryani-delivery" className="hover:text-saffron-300">Delivery Areas</Link></li>
+            <li><Link href="/why-kolkata-biryani-has-potato" className="hover:text-saffron-300">Why the potato?</Link></li>
             <li><Link href="/#faq" className="hover:text-saffron-300">FAQ</Link></li>
           </ul>
         </nav>

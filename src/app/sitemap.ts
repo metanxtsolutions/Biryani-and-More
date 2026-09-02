@@ -46,5 +46,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    {
+      url: `${siteConfig.url}/why-kolkata-biryani-has-potato`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
   ];
 }
