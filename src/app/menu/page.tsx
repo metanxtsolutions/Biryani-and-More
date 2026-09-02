@@ -123,7 +123,7 @@ export default function MenuPage() {
           <div className="flex flex-col gap-14">
             {menu.map((category) => (
               <div key={category.id}>
-                <h2 className="font-display text-2xl font-semibold text-charcoal">
+                <h2 className="font-display text-2xl font-bold tracking-[-0.035em] text-charcoal">
                   {category.title}
                 </h2>
                 {category.subtitle && (
@@ -138,7 +138,7 @@ export default function MenuPage() {
                         <div className="flex items-baseline gap-1">
                           <span className="flex items-center gap-2.5">
                             <DietMark dietary={item.dietary} />
-                            <h3 className="font-display text-lg font-semibold text-charcoal">
+                            <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-charcoal">
                               {dish ? (
                                 <Link
                                   href={`/menu/${dish.slug}`}
@@ -152,7 +152,7 @@ export default function MenuPage() {
                             </h3>
                           </span>
                           <span aria-hidden="true" className="leader" />
-                          <span className="font-display shrink-0 text-lg font-semibold text-maroon-600">
+                          <span className="font-display shrink-0 text-lg font-semibold tracking-[-0.02em] text-maroon-600">
                             ₹{item.price}
                           </span>
                         </div>

@@ -168,7 +168,7 @@ export default async function DishPage({ params }: Props) {
               </h1>
               <p className="mt-3 text-lg text-charcoal/70">{dish.tagline}</p>
 
-              <p className="font-display mt-6 text-4xl font-semibold text-maroon-600">
+              <p className="font-display mt-6 text-4xl font-semibold tracking-[-0.02em] text-maroon-600">
                 ₹{item.price}
                 {item.serves && (
                   <span className="ml-2 align-middle text-sm font-normal text-charcoal/55">
@@ -296,12 +296,12 @@ export default async function DishPage({ params }: Props) {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="font-display text-lg font-semibold text-charcoal">
+                      <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-charcoal">
                         {r.name}
                       </h3>
                       <p className="mt-1.5 text-sm text-charcoal/65">{r.tagline}</p>
                       {rItem && (
-                        <p className="font-display mt-3 text-xl font-semibold text-maroon-600">
+                        <p className="font-display mt-3 text-xl font-semibold tracking-[-0.02em] text-maroon-600">
                           ₹{rItem.price}
                         </p>
                       )}
