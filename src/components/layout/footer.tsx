@@ -43,7 +43,8 @@ export function Footer() {
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-cream/75">
             <li><Link href="/#menu" className="hover:text-saffron-300">Full Menu</Link></li>
-            <li><Link href="/corporate-catering" className="hover:text-saffron-300">Corporate &amp; Party Orders</Link></li>
+            <li><Link href="/corporate-catering" className="hover:text-saffron-300">Corporate Catering</Link></li>
+            <li><Link href="/party-orders" className="hover:text-saffron-300">Party Orders</Link></li>
             <li><Link href="/#why-us" className="hover:text-saffron-300">Why Choose Us</Link></li>
             <li><Link href="/#reviews" className="hover:text-saffron-300">Customer Reviews</Link></li>
             <li><Link href="/#delivery-areas" className="hover:text-saffron-300">Delivery Areas</Link></li>

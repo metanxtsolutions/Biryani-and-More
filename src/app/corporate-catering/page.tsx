@@ -313,6 +313,13 @@ export default function CorporateCateringPage() {
               {siteConfig.contact.hours.display}.{" "}
               <Link href="/" className="text-saffron-300 underline-offset-4 hover:underline">
                 See the full menu
+              </Link>{" "}
+              or{" "}
+              <Link
+                href="/party-orders"
+                className="text-saffron-300 underline-offset-4 hover:underline"
+              >
+                book a party order
               </Link>
               .
             </p>

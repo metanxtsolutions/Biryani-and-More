@@ -125,6 +125,6 @@ export const cateringFaqs: CateringFaq[] = [
   {
     question: "Do you cater party and family events too?",
     answer:
-      "Yes. Birthdays, house parties, festivals and family gatherings are handled the same way as office orders. Tell us the headcount and the date and we will quote it.",
+      "Yes. Birthdays, house parties, festivals and housewarmings are a big part of what we do, and we pack those differently to an office lunch. See the party orders page for portion guidance and evening delivery slots.",
   },
 ];
