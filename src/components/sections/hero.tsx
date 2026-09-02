@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star, Timer, ShieldCheck, Building2 } from "lucide-react";
+import { Star, Flame, ShieldCheck, Building2 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { PlatformBadge } from "@/components/ui/platform-badge";
@@ -12,7 +12,10 @@ const trustStats = [
     value: `${siteConfig.ratings.aggregate}★`,
     label: `${siteConfig.ratings.count}+ ratings`,
   },
-  { icon: Timer, value: "~40 min", label: "Average delivery" },
+  // Not a specific delivery-time claim: "~40 min" was never confirmed and got
+  // removed rather than left as an invented number. This is true instead:
+  // every page already says the food is cooked after the order lands.
+  { icon: Flame, value: "Fresh", label: "Cooked to order" },
   { icon: ShieldCheck, value: "100%", label: "Hygienic kitchen" },
   { icon: Building2, value: "Bulk", label: "Corporate & parties" },
 ];

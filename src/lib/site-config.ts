@@ -78,9 +78,16 @@ export const siteConfig = {
     zomato: "",
   },
 
+  /**
+   * Confirmed by the owner on 2 Sep 2026. Note the earlier bug this replaced:
+   * instagram.com/biryaniandmore and facebook.com/biryaniandmore (no ".in")
+   * are real, unrelated businesses in Saudi Arabia and Mumbai, not us. These
+   * ".in" handles match our actual domain and, for Facebook, the exact page
+   * name "Biryani & More".
+   */
   social: {
-    instagram: "https://instagram.com/biryaniandmore", // TODO
-    facebook: "https://facebook.com/biryaniandmore", // TODO
+    instagram: "https://www.instagram.com/biryaniandmore.in",
+    facebook: "https://www.facebook.com/biryaniandmore.in",
   },
 
   /** Areas served by our own in-house delivery team (direct orders). */

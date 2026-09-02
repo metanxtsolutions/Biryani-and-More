@@ -53,7 +53,9 @@ export function getRestaurantSchema() {
       "@type": "City",
       name: area,
     })),
-    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+    // Filtered rather than listed directly: an empty string here would tell
+    // Google an empty URL is "the same as" this business.
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook].filter(Boolean),
   };
 }
 

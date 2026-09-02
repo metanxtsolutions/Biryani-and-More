@@ -26,8 +26,10 @@ export const faqs: Faq[] = [
   },
   {
     question: "How long does delivery usually take?",
+    // No specific minute range: not a number we have confirmed. True instead
+    // of precise, matching the same question on /biryani-delivery.
     answer:
-      "Most orders arrive within 35 to 45 minutes of confirmation. Because everything is cooked fresh per order rather than held under a warmer, it takes a few minutes longer than reheated food, and tastes considerably better for it.",
+      "Because everything is cooked fresh per order rather than held under a warmer, it takes a little longer than reheated food. We will confirm a realistic time when you order, and for anything on a schedule, tell us the time you need it and we cook backwards from that.",
   },
   {
     question: "Do you have vegetarian options?",

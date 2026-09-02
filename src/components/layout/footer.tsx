@@ -15,26 +15,32 @@ export function Footer() {
             {siteConfig.tagline}. Freshly dum-cooked, hygienically prepared, and delivered fast
             across Kolkata.
           </p>
-          <div className="mt-4 flex gap-3">
-            <a
-              href={siteConfig.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Biryani & More on Instagram"
-              className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
-            >
-              <InstagramIcon className="h-5 w-5" />
-            </a>
-            <a
-              href={siteConfig.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Biryani & More on Facebook"
-              className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
-            >
-              <FacebookIcon className="h-5 w-5" />
-            </a>
-          </div>
+          {(siteConfig.social.instagram || siteConfig.social.facebook) && (
+            <div className="mt-4 flex gap-3">
+              {siteConfig.social.instagram && (
+                <a
+                  href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Biryani & More on Instagram"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
+                >
+                  <InstagramIcon className="h-5 w-5" />
+                </a>
+              )}
+              {siteConfig.social.facebook && (
+                <a
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Biryani & More on Facebook"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
+                >
+                  <FacebookIcon className="h-5 w-5" />
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         <nav aria-label="Quick links">
