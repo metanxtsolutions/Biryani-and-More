@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-charcoal/10 bg-charcoal text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-4">
         <div>
-          <span className="font-display text-xl font-semibold">
+          <span className="font-hero text-lg">
             Biryani<span className="text-saffron-400">&amp;</span>More
           </span>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/70">
@@ -23,7 +23,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Biryani & More on Instagram"
-                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-espresso-900"
                 >
                   <InstagramIcon className="h-5 w-5" />
                 </a>
@@ -34,7 +34,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Biryani & More on Facebook"
-                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-maroon-900"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-espresso-900"
                 >
                   <FacebookIcon className="h-5 w-5" />
                 </a>

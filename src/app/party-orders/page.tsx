@@ -70,7 +70,7 @@ export default function PartyOrdersPage() {
               <span className="text-cream/80">Party orders</span>
             </nav>
 
-            <h1 className="font-display text-balance text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl">
+            <h1 className="font-hero text-balance text-3xl leading-[1.05] sm:text-5xl">
               Party biryani orders in Salt Lake and New Town
             </h1>
 

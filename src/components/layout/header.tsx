@@ -31,7 +31,7 @@ export function Header() {
       </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-semibold tracking-tight text-maroon-600">
+          <span className="font-hero text-xl text-maroon-600">
             Biryani<span className="text-saffron-500">&amp;</span>More
           </span>
         </Link>

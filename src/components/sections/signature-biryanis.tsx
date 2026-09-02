@@ -49,7 +49,7 @@ export function SignatureBiryanis() {
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-soft transition-shadow duration-300 hover:shadow-warm">
                   <Link
                     href={slug ? `/menu/${slug}` : "/menu"}
-                    className="relative block aspect-[5/4] w-full overflow-hidden bg-maroon-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 focus-visible:ring-offset-2"
+                    className="relative block aspect-[5/4] w-full overflow-hidden bg-espresso-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 focus-visible:ring-offset-2"
                   >
                     {item.image && (
                       <Image
@@ -62,7 +62,7 @@ export function SignatureBiryanis() {
                     )}
                     <div
                       aria-hidden="true"
-                      className="absolute inset-0 bg-gradient-to-t from-maroon-900/85 via-maroon-900/10 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-t from-espresso-900/85 via-espresso-900/10 to-transparent"
                     />
 
                     {item.badges && item.badges.length > 0 && (

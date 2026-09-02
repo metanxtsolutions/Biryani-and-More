@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Anton, Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,8 +8,15 @@ import { StickyOrderBar } from "@/components/layout/sticky-order-bar";
 import { siteConfig } from "@/lib/site-config";
 import { getLocalBusinessSchema, getRestaurantSchema } from "@/lib/schema";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   display: "swap",
@@ -55,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${anton.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
         <script

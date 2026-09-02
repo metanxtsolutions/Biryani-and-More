@@ -84,7 +84,7 @@ export default function CorporateCateringPage() {
               <span className="text-cream/80">Corporate catering</span>
             </nav>
 
-            <h1 className="font-display text-balance text-3xl font-semibold leading-[1.08] tracking-tight sm:text-5xl">
+            <h1 className="font-hero text-balance text-3xl leading-[1.05] sm:text-5xl">
               Corporate biryani catering in Salt Lake and Sector V
             </h1>
 

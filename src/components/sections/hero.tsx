@@ -22,7 +22,7 @@ const trustStats = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-maroon-900">
+    <section id="top" className="relative isolate overflow-hidden bg-espresso-900">
       {/* Full-bleed food photography */}
       <Image
         src="/images/hero-biryani-handi.jpg"
@@ -40,18 +40,18 @@ export function Hero() {
       {/* Warm scrim: keeps display type at AA contrast over the photo */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-maroon-900 via-maroon-900/90 to-maroon-900/40"
+        className="absolute inset-0 bg-gradient-to-r from-espresso-900 via-espresso-900/90 to-espresso-900/40"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-maroon-900 via-transparent to-maroon-900/60"
+        className="absolute inset-0 bg-gradient-to-t from-espresso-900 via-transparent to-espresso-900/60"
       />
 
       <div className="relative mx-auto flex min-h-[38rem] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:min-h-[44rem] lg:py-28">
         <Reveal className="max-w-2xl">
           <p className="eyebrow text-saffron-300">Cloud Kitchen · Sector V &amp; New Town</p>
 
-          <h1 className="font-display mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">
+          <h1 className="font-hero mt-6 text-balance text-4xl leading-[1.02] text-cream sm:text-6xl lg:text-7xl">
             Fresh dum biryani,
             <span className="block text-saffron-300">served hot.</span>
           </h1>
@@ -88,7 +88,7 @@ export function Hero() {
       </div>
 
       {/* Trust strip */}
-      <div className="relative border-t border-cream/15 bg-maroon-900/60 backdrop-blur-sm">
+      <div className="relative border-t border-cream/15 bg-espresso-900/70 backdrop-blur-sm">
         <dl className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-5 sm:px-8 lg:grid-cols-4">
           {trustStats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-3 py-5 lg:justify-center">
