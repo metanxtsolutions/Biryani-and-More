@@ -1,12 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import * as Tabs from "@radix-ui/react-tabs";
 import { Badge } from "@/components/ui/badge";
 import { DietMark } from "@/components/ui/diet-mark";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 import { menu, type DietaryTag } from "@/lib/menu-data";
+import { dishes } from "@/lib/dish-data";
+
+// slug lookup by menu item id, so item names here link through to their full
+// dish page (/menu/[slug]) where one exists, same as on the /menu route.
+const slugByItemId = new Map(dishes.map((d) => [d.menuItemId, d.slug]));
 
 const dietaryFilters: Array<{ value: DietaryTag | "all"; label: string }> = [
   { value: "all", label: "All" },
@@ -106,7 +112,16 @@ export function FullMenu() {
                         <span className="flex items-center gap-2.5">
                           <DietMark dietary={item.dietary} />
                           <h3 className="font-display text-lg font-semibold text-charcoal">
-                            {item.name}
+                            {slugByItemId.has(item.id) ? (
+                              <Link
+                                href={`/menu/${slugByItemId.get(item.id)}`}
+                                className="underline-offset-4 hover:text-maroon-600 hover:underline"
+                              >
+                                {item.name}
+                              </Link>
+                            ) : (
+                              item.name
+                            )}
                           </h3>
                         </span>
 
@@ -138,7 +153,15 @@ export function FullMenu() {
           ))}
         </Tabs.Root>
 
-        <p className="mt-12 text-center text-xs text-charcoal/65">
+        <p className="mt-12 text-center text-sm text-charcoal/70">
+          <Link
+            href="/menu"
+            className="font-medium text-maroon-600 underline-offset-4 hover:underline"
+          >
+            View the full menu as one page →
+          </Link>
+        </p>
+        <p className="mt-3 text-center text-xs text-charcoal/65">
           Images are for illustration purposes only.
         </p>
       </div>
