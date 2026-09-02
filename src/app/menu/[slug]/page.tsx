@@ -163,7 +163,7 @@ export default async function DishPage({ params }: Props) {
                 ))}
               </div>
 
-              <h1 className="font-hero mt-5 text-balance text-3xl leading-[1.05] text-charcoal sm:text-5xl">
+              <h1 className="font-hero mt-5 text-balance text-3xl font-bold leading-[1.05] tracking-[-0.035em] text-charcoal sm:text-5xl">
                 {dish.name}
               </h1>
               <p className="mt-3 text-lg text-charcoal/70">{dish.tagline}</p>

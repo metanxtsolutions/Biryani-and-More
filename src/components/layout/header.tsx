@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { getWhatsAppUrl } from "@/lib/site-config";
 import Link from "next/link";
 
@@ -30,10 +31,8 @@ export function Header() {
         Skip to main content
       </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-hero text-xl text-maroon-600">
-            Biryani<span className="text-saffron-500">&amp;</span>More
-          </span>
+        <Link href="/" className="flex items-center">
+          <BrandMark tileSize={32} wordmarkClassName="text-xl" />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">

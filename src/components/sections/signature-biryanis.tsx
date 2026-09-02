@@ -49,7 +49,7 @@ export function SignatureBiryanis() {
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-soft transition-shadow duration-300 hover:shadow-warm">
                   <Link
                     href={slug ? `/menu/${slug}` : "/menu"}
-                    className="relative block aspect-[5/4] w-full overflow-hidden bg-espresso-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 focus-visible:ring-offset-2"
+                    className="relative block aspect-[5/4] w-full overflow-hidden bg-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 focus-visible:ring-offset-2"
                   >
                     {item.image && (
                       <Image
@@ -62,7 +62,7 @@ export function SignatureBiryanis() {
                     )}
                     <div
                       aria-hidden="true"
-                      className="absolute inset-0 bg-gradient-to-t from-espresso-900/85 via-espresso-900/10 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent"
                     />
 
                     {item.badges && item.badges.length > 0 && (
@@ -76,10 +76,10 @@ export function SignatureBiryanis() {
                     )}
 
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
-                      <h3 className="font-display text-xl font-semibold leading-tight text-cream">
+                      <h3 className="font-display text-xl font-semibold leading-tight tracking-[-0.02em] text-cream">
                         {item.name}
                       </h3>
-                      <span className="font-display shrink-0 text-2xl font-semibold text-saffron-300">
+                      <span className="font-display shrink-0 text-2xl font-semibold tracking-[-0.02em] text-saffron-300">
                         ₹{item.price}
                       </span>
                     </div>

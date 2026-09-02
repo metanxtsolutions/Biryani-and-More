@@ -111,7 +111,7 @@ export function FullMenu() {
                       <div className="flex items-baseline gap-1">
                         <span className="flex items-center gap-2.5">
                           <DietMark dietary={item.dietary} />
-                          <h3 className="font-display text-lg font-semibold text-charcoal">
+                          <h3 className="font-display text-lg font-semibold tracking-[-0.02em] text-charcoal">
                             {slugByItemId.has(item.id) ? (
                               <Link
                                 href={`/menu/${slugByItemId.get(item.id)}`}
@@ -127,7 +127,7 @@ export function FullMenu() {
 
                         <span aria-hidden="true" className="leader" />
 
-                        <span className="font-display shrink-0 text-lg font-semibold text-maroon-600">
+                        <span className="font-display shrink-0 text-lg font-semibold tracking-[-0.02em] text-maroon-600">
                           ₹{item.price}
                         </span>
                       </div>

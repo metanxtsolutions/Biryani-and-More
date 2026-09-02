@@ -110,7 +110,7 @@ export default function AlooStoryPage() {
           </nav>
 
           <p className="eyebrow mt-8 text-maroon-500">The aloo</p>
-          <h1 className="font-hero mt-4 text-balance text-3xl leading-[1.05] text-charcoal sm:text-5xl">
+          <h1 className="font-hero mt-4 text-balance text-3xl font-bold leading-[1.05] tracking-[-0.035em] text-charcoal sm:text-5xl">
             Why does Kolkata biryani have a potato?
           </h1>
 

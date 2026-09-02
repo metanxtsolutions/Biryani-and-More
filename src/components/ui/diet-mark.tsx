@@ -4,7 +4,7 @@ import { dietaryLabel } from "@/lib/menu-data";
 const colors: Record<DietaryTag, string> = {
   veg: "var(--color-cardamom-500)",
   "non-veg": "var(--color-maroon-500)",
-  egg: "var(--color-saffron-500)",
+  egg: "var(--color-egg-500)",
 };
 
 /**

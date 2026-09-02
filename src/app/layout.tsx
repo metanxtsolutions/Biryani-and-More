@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Oswald, Inter } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,23 +8,23 @@ import { StickyOrderBar } from "@/components/layout/sticky-order-bar";
 import { siteConfig } from "@/lib/site-config";
 import { getLocalBusinessSchema, getRestaurantSchema } from "@/lib/schema";
 
-const anton = Anton({
-  variable: "--font-anton",
+/**
+ * Per Brand & Logo Guidelines V1.0: "Archivo does everything" — display,
+ * subhead and body copy all share this one family (weight/tracking set per
+ * use), and it's also the logo wordmark's typeface. JetBrains Mono is the
+ * separate LABEL face for taglines, eyebrows and FSSAI lines.
+ */
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -52,6 +52,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
+  verification: {
+    google: "Dvkku-Di3X39sU6yjXW7F_HKKXdHVqJUUQPX4MAMYEI",
+  },
 };
 
 export default function RootLayout({
@@ -62,7 +65,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
+      className={`${archivo.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <head>
         <script

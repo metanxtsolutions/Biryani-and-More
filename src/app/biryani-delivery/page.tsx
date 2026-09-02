@@ -50,7 +50,7 @@ export default function BiryaniDeliveryPage() {
       />
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-espresso-900 py-16 text-cream sm:py-24">
+      <section className="relative isolate overflow-hidden bg-charcoal py-16 text-cream sm:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
             <nav aria-label="Breadcrumb" className="mb-6 text-xs text-cream/55">
@@ -63,7 +63,7 @@ export default function BiryaniDeliveryPage() {
               <span className="text-cream/80">Delivery areas</span>
             </nav>
 
-            <h1 className="font-hero text-balance text-3xl leading-[1.05] sm:text-5xl">
+            <h1 className="font-hero text-balance text-3xl font-bold leading-[1.05] tracking-[-0.035em] sm:text-5xl">
               Biryani delivery in Salt Lake, Sector V and New Town
             </h1>
 

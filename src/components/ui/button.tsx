@@ -10,7 +10,7 @@ const buttonVariants = cva(
         primary:
           "bg-maroon-600 text-cream shadow-warm hover:bg-maroon-700 active:bg-maroon-900",
         secondary:
-          "bg-saffron-400 text-espresso-900 hover:bg-saffron-500 shadow-soft",
+          "bg-saffron-400 text-charcoal hover:bg-saffron-500 shadow-soft",
         outline:
           "border-2 border-maroon-600 text-maroon-600 hover:bg-maroon-600 hover:text-cream",
         /**
@@ -20,7 +20,7 @@ const buttonVariants = cva(
          * the cascade and render maroon-on-maroon.
          */
         outlineLight:
-          "border-2 border-cream/50 text-cream hover:bg-cream hover:text-maroon-700 focus-visible:ring-offset-espresso-900",
+          "border-2 border-cream/50 text-cream hover:bg-cream hover:text-maroon-700 focus-visible:ring-offset-charcoal",
         ghost: "text-maroon-600 hover:bg-maroon-50",
         /**
          * Dark text on WhatsApp green, not white: white-on-#25D366 is only

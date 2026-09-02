@@ -7,12 +7,12 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        bestseller: "bg-saffron-400 text-espresso-900",
+        bestseller: "bg-saffron-400 text-charcoal",
         chef: "bg-maroon-600 text-cream",
         new: "bg-cardamom-500 text-cream",
         veg: "border border-cardamom-500 text-cardamom-500",
         "non-veg": "border border-maroon-500 text-maroon-500",
-        egg: "border border-gold-500 text-gold-500",
+        egg: "border border-egg-500 text-egg-500",
         neutral: "bg-cream-soft text-charcoal",
       },
     },

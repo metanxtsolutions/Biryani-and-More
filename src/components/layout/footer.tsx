@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/icons/social";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { siteConfig, getTelUrl } from "@/lib/site-config";
 import Link from "next/link";
 
@@ -8,9 +9,7 @@ export function Footer() {
     <footer className="border-t border-charcoal/10 bg-charcoal text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-4">
         <div>
-          <span className="font-hero text-lg">
-            Biryani<span className="text-saffron-400">&amp;</span>More
-          </span>
+          <BrandMark variant="reversed" tileSize={28} wordmarkClassName="text-lg" />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cream/70">
             {siteConfig.tagline}. Freshly dum-cooked, hygienically prepared, and delivered fast
             across Kolkata.
@@ -23,7 +22,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Biryani & More on Instagram"
-                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-espresso-900"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-charcoal"
                 >
                   <InstagramIcon className="h-5 w-5" />
                 </a>
@@ -34,7 +33,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Biryani & More on Facebook"
-                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-espresso-900"
+                  className="rounded-full bg-cream/10 p-2 transition-colors hover:bg-saffron-400 hover:text-charcoal"
                 >
                   <FacebookIcon className="h-5 w-5" />
                 </a>
