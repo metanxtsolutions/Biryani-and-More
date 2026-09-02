@@ -3,6 +3,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PlatformBadge } from "@/components/ui/platform-badge";
 import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
 
 export function DeliveryAreas() {
   return (
@@ -92,11 +93,19 @@ export function DeliveryAreas() {
           </Reveal>
         </div>
 
-        <p className="mt-8 flex items-center gap-2 text-sm text-charcoal/60">
-          <Clock className="h-4 w-4 shrink-0 text-maroon-500" aria-hidden="true" />
-          Open daily, {siteConfig.contact.hours.display}. Just outside these areas? Message us
-          on WhatsApp. We extend direct delivery depending on demand.
-        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+          <p className="flex items-center gap-2 text-sm text-charcoal/60">
+            <Clock className="h-4 w-4 shrink-0 text-maroon-500" aria-hidden="true" />
+            Open daily, {siteConfig.contact.hours.display}. Just outside these areas? Message
+            us on WhatsApp.
+          </p>
+          <Link
+            href="/biryani-delivery"
+            className="text-sm font-medium text-maroon-600 underline-offset-4 hover:underline"
+          >
+            Full delivery details →
+          </Link>
+        </div>
       </div>
     </section>
   );

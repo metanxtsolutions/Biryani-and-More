@@ -15,7 +15,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/#menu", label: "Menu" },
   { href: "/corporate-catering", label: "Corporate & Parties" },
-  { href: "/#delivery-areas", label: "Delivery" },
+  { href: "/biryani-delivery", label: "Delivery" },
   { href: "/#reviews", label: "Reviews" },
   { href: "/#about", label: "About" },
   { href: "/#faq", label: "FAQ" },
