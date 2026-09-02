@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/icons/social";
 import { siteConfig, getTelUrl } from "@/lib/site-config";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -41,12 +42,12 @@ export function Footer() {
             Explore
           </h2>
           <ul className="mt-4 space-y-2 text-sm text-cream/75">
-            <li><a href="#menu" className="hover:text-saffron-300">Full Menu</a></li>
-            <li><a href="#corporate" className="hover:text-saffron-300">Corporate &amp; Party Orders</a></li>
-            <li><a href="#why-us" className="hover:text-saffron-300">Why Choose Us</a></li>
-            <li><a href="#reviews" className="hover:text-saffron-300">Customer Reviews</a></li>
-            <li><a href="#delivery-areas" className="hover:text-saffron-300">Delivery Areas</a></li>
-            <li><a href="#faq" className="hover:text-saffron-300">FAQ</a></li>
+            <li><Link href="/#menu" className="hover:text-saffron-300">Full Menu</Link></li>
+            <li><Link href="/corporate-catering" className="hover:text-saffron-300">Corporate &amp; Party Orders</Link></li>
+            <li><Link href="/#why-us" className="hover:text-saffron-300">Why Choose Us</Link></li>
+            <li><Link href="/#reviews" className="hover:text-saffron-300">Customer Reviews</Link></li>
+            <li><Link href="/#delivery-areas" className="hover:text-saffron-300">Delivery Areas</Link></li>
+            <li><Link href="/#faq" className="hover:text-saffron-300">FAQ</Link></li>
           </ul>
         </nav>
 

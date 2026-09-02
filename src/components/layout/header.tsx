@@ -5,14 +5,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/site-config";
+import Link from "next/link";
 
+/**
+ * Hrefs are root-relative ("/#menu", not "#menu") so they still work from
+ * interior routes like /corporate-catering, where a bare hash points at a
+ * section that does not exist on the page.
+ */
 const navLinks = [
-  { href: "#menu", label: "Menu" },
-  { href: "#corporate", label: "Corporate & Parties" },
-  { href: "#delivery-areas", label: "Delivery" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#about", label: "About" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/corporate-catering", label: "Corporate & Parties" },
+  { href: "/#delivery-areas", label: "Delivery" },
+  { href: "/#reviews", label: "Reviews" },
+  { href: "/#about", label: "About" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function Header() {
@@ -24,28 +30,28 @@ export function Header() {
         Skip to main content
       </a>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#top" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-semibold tracking-tight text-maroon-600">
             Biryani<span className="text-saffron-500">&amp;</span>More
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-charcoal/75 transition-colors hover:text-maroon-600"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="#order" className={buttonVariants({ variant: "primary", size: "md" })}>
+          <Link href="/#order" className={buttonVariants({ variant: "primary", size: "md" })}>
             Order Now
-          </a>
+          </Link>
         </div>
 
         <button
@@ -73,22 +79,22 @@ export function Header() {
           >
             <div className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-3 text-base font-medium text-charcoal/80 hover:bg-cream-soft hover:text-maroon-600"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#order"
+              <Link
+                href="/#order"
                 onClick={() => setOpen(false)}
                 className={buttonVariants({ variant: "primary", size: "lg", className: "mt-2 w-full" })}
               >
                 Order Now
-              </a>
+              </Link>
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"

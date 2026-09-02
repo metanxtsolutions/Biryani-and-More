@@ -52,7 +52,7 @@ export function OrderAndContact() {
 
         <Reveal delay={0.15} className="mt-6">
           <a
-            href="#corporate"
+            href="/corporate-catering"
             className="inline-flex items-center gap-2 text-sm font-medium text-saffron-300 underline-offset-4 hover:underline"
           >
             <Building2 className="h-4 w-4" aria-hidden="true" />

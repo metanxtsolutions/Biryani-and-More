@@ -4,6 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { PlatformBadge } from "@/components/ui/platform-badge";
 import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
 
 const trustStats = [
   {
@@ -54,19 +55,20 @@ export function Hero() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
             Slow-cooked in sealed handis with long-grain basmati, tender meat and whole
-            spices, made fresh for every single order. Never pre-cooked, never reheated.
+            spices, made fresh for every single order. Delivered across Salt Lake Sector V
+            and New Town, from our kitchen in Krishnapur.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a href="#order" className={buttonVariants({ variant: "secondary", size: "lg" })}>
+            <Link href="/#order" className={buttonVariants({ variant: "secondary", size: "lg" })}>
               Order Now
-            </a>
-            <a
-              href="#menu"
+            </Link>
+            <Link
+              href="/#menu"
               className={buttonVariants({ variant: "outlineLight", size: "lg" })}
             >
               View Full Menu
-            </a>
+            </Link>
           </div>
 
           <div className="mt-8">

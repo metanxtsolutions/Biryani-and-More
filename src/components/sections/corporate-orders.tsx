@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { Check, Phone } from "lucide-react";
+import Link from "next/link";
+import { Check, Phone, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buttonVariants } from "@/components/ui/button";
-import { siteConfig, getWhatsAppUrl, getTelUrl } from "@/lib/site-config";
+import { siteConfig, getTelUrl } from "@/lib/site-config";
 
 export function CorporateOrders() {
   return (
@@ -29,16 +30,16 @@ export function CorporateOrders() {
           </ul>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a
-              href={getWhatsAppUrl(
-                "Hi Biryani & More! I'd like a quote for a bulk / corporate order."
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* Primary action is the full catering page, not the WhatsApp link:
+                this section is a teaser, and the internal link is what lets
+                /corporate-catering rank. */}
+            <Link
+              href="/corporate-catering"
               className={buttonVariants({ variant: "secondary", size: "lg" })}
             >
-              Get a bulk quote
-            </a>
+              See catering details
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
             <a
               href={getTelUrl()}
               className={buttonVariants({ variant: "outlineLight", size: "lg" })}

@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { buttonVariants } from "@/components/ui/button";
 import { signatureBiryanis } from "@/lib/menu-data";
 import { getWhatsAppUrl } from "@/lib/site-config";
+import Link from "next/link";
 
 const badgeVariantMap = {
   "Best Seller": "bestseller",
@@ -22,8 +23,8 @@ export function SignatureBiryanis() {
             title="Slow-cooked, sealed, and worth the wait"
             className="max-w-xl"
           />
-          <a
-            href="#menu"
+          <Link
+            href="/#menu"
             className={buttonVariants({
               variant: "ghost",
               size: "md",
@@ -31,7 +32,7 @@ export function SignatureBiryanis() {
             })}
           >
             See the full menu →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">

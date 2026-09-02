@@ -9,8 +9,13 @@ export const siteConfig = {
   name: "Biryani & More",
   shortName: "Biryani & More",
   tagline: "Fresh Dum Biryani · Made Fresh · Served Hot",
+  /**
+   * Drives the meta description, Open Graph description and schema. Keep it
+   * under 160 characters: Google truncates around there, and the previous
+   * 231-character version cut off before the order channels were mentioned.
+   */
   description:
-    "Premium cloud kitchen serving slow dum-cooked chicken, mutton, prawns, egg and veg biryani. Order on Swiggy, Zomato, or direct from our kitchen, with our own delivery across Sector V and New Town, plus corporate and party catering.",
+    "Fresh dum biryani in Salt Lake Sector V and New Town. Chicken, mutton, prawns, egg and veg, cooked to order. Swiggy, Zomato or direct on WhatsApp.",
   /**
    * Must match whichever host Vercel serves as primary. Right now the apex
    * 308-redirects to www, so www is canonical: pointing the canonical tag at a
