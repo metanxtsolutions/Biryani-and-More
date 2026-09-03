@@ -2,7 +2,12 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/icons/social";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { siteConfig, getTelUrl } from "@/lib/site-config";
+import { reviews } from "@/lib/reviews-data";
 import Link from "next/link";
+
+// Same rule as the header nav: only link to "Reviews" once that section
+// actually renders something. See reviews.tsx.
+const showReviews = siteConfig.ratings.verified || reviews.length > 0;
 
 export function Footer() {
   return (
@@ -51,7 +56,9 @@ export function Footer() {
             <li><Link href="/corporate-catering" className="hover:text-saffron-300">Corporate Catering</Link></li>
             <li><Link href="/party-orders" className="hover:text-saffron-300">Party Orders</Link></li>
             <li><Link href="/#why-us" className="hover:text-saffron-300">Why Choose Us</Link></li>
-            <li><Link href="/#reviews" className="hover:text-saffron-300">Customer Reviews</Link></li>
+            {showReviews && (
+              <li><Link href="/#reviews" className="hover:text-saffron-300">Customer Reviews</Link></li>
+            )}
             <li><Link href="/biryani-delivery" className="hover:text-saffron-300">Delivery Areas</Link></li>
             <li><Link href="/why-kolkata-biryani-has-potato" className="hover:text-saffron-300">Why the potato?</Link></li>
             <li><Link href="/#faq" className="hover:text-saffron-300">FAQ</Link></li>

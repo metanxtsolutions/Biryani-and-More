@@ -5,19 +5,26 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { BrandMark } from "@/components/ui/brand-mark";
-import { getWhatsAppUrl } from "@/lib/site-config";
+import { getWhatsAppUrl, siteConfig } from "@/lib/site-config";
+import { reviews } from "@/lib/reviews-data";
 import Link from "next/link";
 
 /**
  * Hrefs are root-relative ("/#menu", not "#menu") so they still work from
  * interior routes like /corporate-catering, where a bare hash points at a
  * section that does not exist on the page.
+ *
+ * "Reviews" only appears once the Reviews section actually renders
+ * something (see reviews.tsx) — otherwise this would be a nav link to a
+ * section that is not on the page.
  */
+const showReviews = siteConfig.ratings.verified || reviews.length > 0;
+
 const navLinks = [
   { href: "/#menu", label: "Menu" },
   { href: "/corporate-catering", label: "Corporate & Parties" },
   { href: "/biryani-delivery", label: "Delivery" },
-  { href: "/#reviews", label: "Reviews" },
+  ...(showReviews ? [{ href: "/#reviews", label: "Reviews" }] : []),
   { href: "/#about", label: "About" },
   { href: "/#faq", label: "FAQ" },
 ];

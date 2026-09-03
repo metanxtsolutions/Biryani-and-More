@@ -8,7 +8,7 @@ export function StickyOrderBar() {
         href="/#order"
         className={buttonVariants({ variant: "primary", size: "lg", className: "w-full" })}
       >
-        Order Now: Fresh &amp; Fast Delivery
+        Order Now: Fresh Dum Biryani
       </Link>
     </div>
   );

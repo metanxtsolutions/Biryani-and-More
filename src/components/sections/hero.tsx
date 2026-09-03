@@ -1,20 +1,26 @@
 import Image from "next/image";
-import { Star, Flame, ShieldCheck, Building2 } from "lucide-react";
+import { Star, Flame, ShieldCheck, Building2, Bike } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { PlatformBadge } from "@/components/ui/platform-badge";
 import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
 
+/**
+ * First stat is the real, verified rating once siteConfig.ratings.verified
+ * is true; until then it falls back to a claim that is actually true today
+ * rather than an invented one. Same reasoning as the removed "~40 min"
+ * delivery estimate below: every page already says the food is cooked
+ * after the order lands, so "Fresh / Cooked to order" needs no citation.
+ */
 const trustStats = [
-  {
-    icon: Star,
-    value: `${siteConfig.ratings.aggregate}★`,
-    label: `${siteConfig.ratings.count}+ ratings`,
-  },
-  // Not a specific delivery-time claim: "~40 min" was never confirmed and got
-  // removed rather than left as an invented number. This is true instead:
-  // every page already says the food is cooked after the order lands.
+  siteConfig.ratings.verified
+    ? {
+        icon: Star,
+        value: `${siteConfig.ratings.aggregate}★`,
+        label: `${siteConfig.ratings.count}+ ratings`,
+      }
+    : { icon: Bike, value: "Direct", label: "Own delivery team" },
   { icon: Flame, value: "Fresh", label: "Cooked to order" },
   { icon: ShieldCheck, value: "100%", label: "Hygienic kitchen" },
   { icon: Building2, value: "Bulk", label: "Corporate & parties" },
